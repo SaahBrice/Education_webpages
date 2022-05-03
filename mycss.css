@@ -1,0 +1,68 @@
+.page-header {
+    height: 150px;
+  }
+   
+  .page-header .uk-navbar-nav > li > a,
+  .page-header .uk-icon-link,
+  .page-header .uk-icon-link:hover {
+    color: #333;
+  }
+   
+
+ .logo_image {
+     margin-top: 10PX;
+ }
+
+ .slogan_text {
+     font-family:cursive;
+     text-decoration: none;
+     color: black;
+ }
+  .page-header .uk-navbar-nav > li > a {
+    padding: 0 25px;
+    font-size: 20px;
+  }
+   
+  .page-header .uk-navbar-nav > li > a:hover {
+    background: #f6f7f9;
+  }
+   
+  .page-header .multi .uk-navbar-dropdown {
+    padding: 0 25px;
+  }
+   
+  .page-header .uk-navbar-dropdown-nav .uk-nav-header {
+    color: #7c2a8a;
+  }
+   
+  .page-header [class*="uk-column-"] > li {
+    padding: 25px 0;
+  }
+   
+  .page-header [class*="uk-column-"] > li:not(:last-child) {
+    border-right: 1px solid #e5e5e5;
+  }
+   
+  .page-header [class*="uk-column-"] .uk-icon {
+    color: #c6c6c6;
+  }
+   
+  .offcanvas .uk-nav-header {
+    color: rgba(246, 247, 249, 0.5);
+  }
+   
+  .offcanvas .top-menu > li + li {
+    margin-top: 10px;
+  }
+   
+  .offcanvas .sub-menu {
+    border-left: 1px solid #484848;
+  }
+   
+  .offcanvas .sub-menu li {
+    padding-left: 30px;
+  }
+   
+  .offcanvas .sub-menu li.uk-nav-header {
+    padding-left: 10px;
+  }

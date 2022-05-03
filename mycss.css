@@ -6,28 +6,38 @@ html {
     height: 100px;
   }
 
-  .page-header§1 {
+  .page-header_1 {
     height: 150px;
   }
 
+
   .slogan_text {
       font-size: 40px;
-      font-family:'Trebuchet MS';;
+      font-family:Georgia, 'Times New Roman', Times, serif;
       margin: 40px;
       text-decoration: none;
       color: black;
       font-weight: 50;
   }
 
+
+
   .logo_image {
       padding: 20px;
       padding-bottom: 20px;
+      font-weight: bold;
+
+  }
+  .logo_image:hover {
+      text-decoration: none;
+      font-weight: normal;
   }
   
   .page-header .uk-navbar-nav > li > a,
   .page-header .uk-icon-link,
   .page-header .uk-icon-link:hover {
     color: #333;
+    font-size: 20px;
   }
   
   .page-header .uk-navbar-nav > li > a {
@@ -35,16 +45,22 @@ html {
   }
   
   .page-header .uk-navbar-nav > li > a:hover {
-    background: #f6f7f9;
+    background: #00b3ff;
   }
   
   .page-header .multi .uk-navbar-dropdown {
     padding: 0 25px;
   }
   
-  .page-header .uk-navbar-dropdown-nav .uk-nav-header {
-    color: #7c2a8a;
+  .page-header .uk-navbar-dropdown-nav .uk-nav-header a {
+    color: #1c1c1c;
+    font-size: 20px;
   }
+
+.page-header .uk-navbar-dropdown-nav .uk-nav-header a:hover {
+    color:#00b3ff;
+}
+
   
   .page-header [class*="uk-column-"] > li {
     padding: 25px 0;

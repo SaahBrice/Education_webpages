@@ -1,0 +1,2 @@
+
+font text on laning page 20px

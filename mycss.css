@@ -12,12 +12,13 @@ html {
 
 
   .slogan_text {
-      font-size: 40px;
+      font-size: 30px;
       font-family:Georgia, 'Times New Roman', Times, serif;
       margin: 40px;
       text-decoration: none;
       color: black;
       font-weight: 50;
+      text-align: center;
   }
 
 

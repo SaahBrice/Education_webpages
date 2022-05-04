@@ -29,9 +29,9 @@
       
     <header class="page-header  uk-background-default" uk-sticky>
         <div class="uk-container uk-container-expand uk-height-1-1">
-          <nav class="uk-height-1-1" uk-navbar>
+          <nav class="uk-height-1-1 uk-navbar-transparent" uk-navbar>
       
-            <ul class="uk-navbar-nav uk-navbar-center uk-visible@l">
+            <ul class="uk-navbar-nav uk-navbar-center uk-visible@m">
               <li class="multi">
                 <a href="">
                   SCHOOLS
@@ -123,17 +123,17 @@
             </ul>
 
             <div class="uk-navbar-center">
-                <a href="" class="uk-flex uk-flex-left uk-padding uk-hidden@l">
+                <a href="" class="uk-flex uk-flex-left uk-padding uk-hidden@m">
                     <img width="50" height="50" src="images/landing_page_images/rainbow_logo.png" alt="school logo">
                 </a>
-                <p class=" uk-padding uk-hidden@l">WE SAY, WE DO AND YOU SEE</p>
-                <button class="uk-margin-left uk-hidden@l uk-padding" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu">
+                <p class=" uk-padding uk-hidden@m">WE SAY, WE DO AND YOU SEE</p>
+                <button class="uk-margin-left uk-hidden@m uk-padding" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu">
                 </button> 
             </div>
           </nav>
         </div>
       
-        <div class="offcanvas uk-hidden@l" id="offcanvas" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+        <div class="offcanvas uk-hidden@m" id="offcanvas" uk-offcanvas="flip: true; overlay: true; mode: reveal">
           <div class="uk-offcanvas-bar">
             <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close Mobile Menu"></button>
       
@@ -196,59 +196,49 @@
 
     <!-- ################# THIS IS THE FIRST IMAGE SECTION ####################-->
 
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: slide; autoplay: true; autoplay-interval:5000; pause-on-hover:true;">
 
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-
-        <ul class="uk-slider-items uk-grid">
-            <li class="uk-width-4-5">
-                <div class="uk-panel">
-                    <img src="images/photo.jpg" width="1800" height="1200" alt="">
-                    <div class="uk-position-center uk-text-center">
-                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+        <ul class="uk-slideshow-items">
+            <li>
+                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                    <img src="images/scroll_images/1.JPG" alt="" uk-cover>
+                </div>
+                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+                <div class="uk-position-center uk-position-medium uk-text-center">
+                    <div uk-slideshow-parallax="scale: 1,1,0.8">
+                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </li>
-            <li class="uk-width-4-5">
-                <div class="uk-panel">
-                    <img src="images/dark.jpg" width="1800" height="1200" alt="">
-                    <div class="uk-position-center uk-text-center">
-                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+            <li>
+                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                    <img src="images/scroll_images/2.JPG" alt="" uk-cover>
+                </div>
+                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+                <div class="uk-position-center uk-position-medium uk-text-center">
+                    <div uk-slideshow-parallax="scale: 1,1,0.8">
+                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </li>
-            <li class="uk-width-4-5">
-                <div class="uk-panel">
-                    <img src="images/light.jpg" width="1800" height="1200" alt="">
-                    <div class="uk-position-center uk-text-center">
-                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
-                    </div>
+            <li>
+                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                    <img src="images/scroll_images/3.JPG" alt="" uk-cover>
                 </div>
-            </li>
-            <li class="uk-width-4-5">
-                <div class="uk-panel">
-                    <img src="images/photo2.jpg" width="1800" height="1200" alt="">
-                    <div class="uk-position-center uk-text-center">
-                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
-                    </div>
-                </div>
-            </li>
-            <li class="uk-width-4-5">
-                <div class="uk-panel">
-                    <img src="images/photo3.jpg" width="1800" height="1200" alt="">
-                    <div class="uk-position-center uk-text-center">
-                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+                <div class="uk-position-center uk-position-medium uk-text-center">
+                    <div uk-slideshow-parallax="scale: 1,1,0.8">
+                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
             </li>
         </ul>
     
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
     
     </div>
 

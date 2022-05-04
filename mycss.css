@@ -55,7 +55,12 @@ html {
   .page-header .uk-navbar-dropdown-nav .uk-nav-header a {
     color: #1c1c1c;
     font-size: 20px;
+    text-transform: uppercase;
   }
+
+ .contact_text {
+     font-size: 20px;
+ }
 
 .page-header .uk-navbar-dropdown-nav .uk-nav-header a:hover {
     color:#00b3ff;

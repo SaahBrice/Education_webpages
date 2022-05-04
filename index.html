@@ -9,7 +9,9 @@
     <title>Rainbow Complex</title>
 </head>
 <body>
-    <header class="page-header_1  uk-background-default">
+
+    <!-- ################## THIS ARE THE HEADER SECTIONS ###################-->
+    <header class="page-header_1  uk-background-default uk-visible@m uk-visi">
         <div class="uk-container uk-container-expand uk-height-1-1">
           <nav class="uk-height-1-1" uk-navbar>
             <div class=" uk-navbar-center">
@@ -121,10 +123,10 @@
             </ul>
 
             <div class="uk-navbar-center">
-                <a href="" class="uk-flex uk-flex-left uk-padding">
+                <a href="" class="uk-flex uk-flex-left uk-padding uk-hidden@l">
                     <img width="50" height="50" src="images/landing_page_images/rainbow_logo.png" alt="school logo">
                 </a>
-                <p class=" uk-padding">WE SAY, WE DO AND YOU SEE</p>
+                <p class=" uk-padding uk-hidden@l">WE SAY, WE DO AND YOU SEE</p>
                 <button class="uk-margin-left uk-hidden@l uk-padding" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu">
                 </button> 
             </div>
@@ -190,6 +192,70 @@
           </div>
         </div>
       </header>
+
+
+    <!-- ################# THIS IS THE FIRST IMAGE SECTION ####################-->
+
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
+
+        <ul class="uk-slider-items uk-grid">
+            <li class="uk-width-4-5">
+                <div class="uk-panel">
+                    <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                    <div class="uk-position-center uk-text-center">
+                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-4-5">
+                <div class="uk-panel">
+                    <img src="images/dark.jpg" width="1800" height="1200" alt="">
+                    <div class="uk-position-center uk-text-center">
+                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-4-5">
+                <div class="uk-panel">
+                    <img src="images/light.jpg" width="1800" height="1200" alt="">
+                    <div class="uk-position-center uk-text-center">
+                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-4-5">
+                <div class="uk-panel">
+                    <img src="images/photo2.jpg" width="1800" height="1200" alt="">
+                    <div class="uk-position-center uk-text-center">
+                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="uk-width-4-5">
+                <div class="uk-panel">
+                    <img src="images/photo3.jpg" width="1800" height="1200" alt="">
+                    <div class="uk-position-center uk-text-center">
+                        <h2 uk-slider-parallax="x: 100,-100">Heading</h2>
+                        <p uk-slider-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    
+    </div>
+
+
+
+
+
 
 
 

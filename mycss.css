@@ -3,8 +3,8 @@ html {
   }
   
   .page-header {
-    height: 75px;
-
+    height: 50px;
+    background-color: #507cff;
 
   }
 
@@ -63,6 +63,7 @@ html {
 
  .contact_text {
      font-size: 20px;
+     text-transform: lowercase;
  }
 
 .page-header .uk-navbar-dropdown-nav .uk-nav-header a:hover {

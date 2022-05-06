@@ -1,2 +1,2 @@
 
-font text on laning page 20px
+font text on landing page 20px

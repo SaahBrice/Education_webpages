@@ -3,8 +3,9 @@ html {
   }
   
   .page-header {
-    height: 50px;
-    background-color: #507cff;
+    /*height: 50px;*/
+    margin-top: 50px;
+
 
   }
 

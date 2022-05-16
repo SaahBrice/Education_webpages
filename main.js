@@ -67,3 +67,10 @@ var chartBar = new Chart(
   document.getElementById("chartBar"),
   configBarChart
 );
+
+
+// aos config
+
+AOS.init(
+  {duration: 1200}
+);

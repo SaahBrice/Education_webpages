@@ -37,9 +37,10 @@ h1.heading{
     color: var(--accent-color);
 }
 
-
-
-/* #carousel{
-    height: 100vh;
+main {
+    overflow-x: hidden;
+}
+/* *{
+    overflow-x: hidden;
 } */
 

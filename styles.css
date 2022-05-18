@@ -6,17 +6,17 @@
     --complimentary-color: rgba(255, 255, 255, .9);
     --accent-color: rgba(0, 0, 0, 0.9);
 
-    --primary-font: 'Raleway';
-    --secondary-font: 'Poppins';
+    --primary-font: 'Roboto';
+    --secondary-font: 'Roboto';
 }
 
 body{
-    font-family: 'Raleway' ;
+    font-family: var(--primary-font) ;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Poppins', 'Open-sans';
+    font-family: var(--secondary-font);
 }
 
 h1.heading{

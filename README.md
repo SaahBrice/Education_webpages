@@ -14,3 +14,15 @@ HTML, CSS, Javascript and UIKIT
 
 Start the html files with your browser  
 
+
+# Home Page specifictations
+
+- Font: 
+    primary - poppins
+    secondary - raleway
+
+- Colors
+    main  : blue
+    complement : white
+    accent: black
+

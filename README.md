@@ -18,8 +18,8 @@ Start the html files with your browser
 # Home Page specifictations
 
 - Font: 
-    primary - poppins
-    secondary - raleway
+    primary - poppins -> Roboto
+    secondary - raleway -> Roboto
 
 - Colors
     main  : blue

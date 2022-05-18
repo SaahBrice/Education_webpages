@@ -13,9 +13,8 @@ tailwind.config = {
     theme: {
       extend: {
         fontFamily: {
-          sans: ['Poppins', 'Raleway'],
-          primary: 'Poppins',
-          secondary: 'Raleway',
+          primary: 'Roboto',
+          secondary: 'Roboto',
         },
         colors:{
           main: 'rgba(59, 130, 246, 0.9)',

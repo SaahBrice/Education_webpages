@@ -32,3 +32,11 @@ Theme Generalities
 Animations
     🟢 use one type of animation for all the entries
     🟢add shadow on cards only when the mouse enters region
+
+
+
+=============🔴🔴🔴🔴=================
+Issues to revisit
+====================================
+🔴Restyle navbar esp. mobile view
+🔴Correct transitions not working issue

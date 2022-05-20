@@ -1,14 +1,49 @@
 
+const mobileMenu = jQuery('#mobile-menu');
+const navBarItems = jQuery('#navbar-items');
+const closeMenu = jQuery('#close-menu');
+const navBar = jQuery('#navbar');
+const header =  $('#header');
+const isSmallScreen = window.innerWidth <= 640;
+
 $(window).on('scroll', function(ev){
     let top = $(window).scrollTop(),
-        bottom = $('#header').offset().top + $('#header').outerHeight();
+        bottom = header.offset().top + header.outerHeight();
+
+ 
     
-    if(bottom < top)jQuery('#navbar').addClass('shadow-xl fixed top-0 right-0 left-0 bg-main')
+    if(bottom < top){//out of view
+      navBar.removeClass('hidden')
+      navBar.addClass(`shadow-xl fixed top-0 right-0 left-0 bg-main ${isSmallScreen && 'flex'}`);
+    }
     else{
-        jQuery('#navbar').removeClass('fixed shadow-xl bg-main')
+      navBar.addClass('hidden')
+      navBar.removeClass(`fixed shadow-xl bg-main ${isSmallScreen && 'flex'}`)
     }
 } 
 )
+
+//mobile menu
+
+if(isSmallScreen) closeMenu.removeClass('hidden')
+
+if(closeMenu) closeMenu.on('click',  (ev)=>{navBarItems.addClass('hidden')});
+if(mobileMenu){
+  mobileMenu.on('click', (ev) => {
+    if(navBarItems.hasClass('hidden')){//currentl not showing
+      navBarItems.removeClass('hidden');
+      navBarItems.addClass(`fixed block h-full  bottom-0 left-0 top-0  right-0 z-10 p-12 bg-main`);
+    }
+    else{
+      navBarItems.addClass('hidden');
+    }
+  }
+
+  )
+}
+
+
+
 tailwind.config = {
     theme: {
       extend: {
@@ -17,9 +52,9 @@ tailwind.config = {
           secondary: 'Roboto',
         },
         colors:{
-          main: 'rgba(59, 130, 246, 0.9)',
-          complimentary: 'rgba(255, 255, 255, .9)',
-          accent: 'rgba(0, 0, 0, 0.9)',
+          main: '#3B82F6',
+          complimentary: '#FFFFFF',
+          accent: '#000000',
         },
 
       }

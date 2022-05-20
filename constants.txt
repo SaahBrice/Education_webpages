@@ -1,2 +1,0 @@
-
-font text on landing page 20px

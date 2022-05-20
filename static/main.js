@@ -43,6 +43,7 @@ if(mobileMenu){
 }
 
 
+// tailwind configurations
 
 tailwind.config = {
     theme: {
@@ -62,8 +63,8 @@ tailwind.config = {
   }
 
 
-  // <!-- Chart bar -->
 
+//success rates chart bar
 const labelsBarChart = [
   "2021", "2020", "2019", "2018", "2017"
 ];

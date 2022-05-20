@@ -2,10 +2,10 @@ A few adjustments we to work on;
 
 The mobile view is not the best.
 
-    The title "Dedicated to excellence" should auto adjust (by reducing size) and 
+    🟢 The title "Dedicated to excellence" should auto adjust (by reducing size) and 
     centralized at the bottom when on mobile view.
 
-    Not enough margin in the paragraph e.g in the paragraph of our motto
+    🟢 Not enough margin in the paragraph e.g in the paragraph of our motto
 
     reduce navbar buttons to a single button containing other buttons, 
     (don't continuously show buttons as the are)
@@ -16,7 +16,7 @@ Theme Generalities
 
     use two colors in this theme, blue and white.
 
-    all icons in white bg should be in blue and all icons in blue should be in white
+    All icons on white bg should be blue, all icons on blue bg should be white
     All text in white bg, in black and all text in blue bg in white
     buttons in white bg in blue and in blue bg in white.
 
@@ -27,6 +27,7 @@ Theme Generalities
 
     Reduce size of chart
     use same kind of cards
-    Animations
-    use one type of animation for all the entries
+
+Animations
+    🟢 use one type of animation for all the entries
     add shadow on cards only when the mouse enters region

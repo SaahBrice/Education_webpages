@@ -5,7 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS ::USE CDN in production-->
+    <link rel="stylesheet" href="assets/aos/dist/aos.css">
+    <script src="assets/aos/dist/aos.js"></script>
+    <!-- Jquery ::USE CDN in production-->
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- main js -->
+    <script defer src="./main.js"></script>
+
     <script src="https://cdn-tailwindcss.vercel.app/"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" /> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,24 +24,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://unpkg.com/tailwindcss@^2.2.7/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script defer src="./main.js"></script>
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
     <title>Rainbow Complex</title>
 </head>
-<body>
+<body >
     <header id="header" class="bg-main p-6 z-50 w-100 block">
         <div class="flex items-center justify-around flex-wrap ">
             <img class="h-32" src="images/landing_page_images/rainbow_logo.png" alt="">
-            <h1 class="text-center font-black text-4xl md:text-5xl lg:text-5xl">Dedicated to exellence since <span>2003</span></h1>
+            <h1 class="text-center font-black text-4xl md:text-5xl">Dedicated to exellence since <span>2003</span></h1>
         </div>
 
-        <nav id="navbar" class="group transition-all ease-in-out delay-150  p-6 z-50 w-100 flex items-center justify-between md:justify-around flex-nowrap ">
+        <nav id="navbar" class="group transition-all ease-in-out delay-150  p-4 md:p-8  z-50 w-full hidden md:flex items-center justify-between md:justify-around ">
             <img class="h-16 inline md:hidden" src="images/landing_page_images/rainbow_logo.png" alt="">
             
-            <div class="hidden md:block w-full">
+            <div id="navbar-items" class="text-xl text-secondary hidden md:flex items-center justify-between md:justify-around w-full">
                 <a href="#" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4 font-bold">
                 Schools
                 </a>
@@ -47,21 +53,17 @@
 
             </div>
 
-            <div class="md:hidden">
+            <div id="mobile-menu" class="w-50 md:hidden">
                 <!-- lines menue -->
-                <svg class="h-16 font-black" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <svg class="text-complimentary  w-full h-12 font-black hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                   </svg>
 
                 <!-- vertical 3 dots menue -->
-                <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                <svg class="text-complimentary w-full h-12 font-medium" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
                     <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                   </svg>
 
-                <!-- horizontal 3 dots menu -->
-                <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
-                  </svg>
             </div>
             
             
@@ -372,14 +374,14 @@
                 </div>
 
             </div>
-            <p class="font-bold text-center m-8">
+            <p class="font-normal font-primary text-md m-8">
                 With their combined experience in education, the Managing Partners of Rainbow Biligual Complex School, <span class="font-black">Chief Charles Morfaw </span> and his wife, <span class="font-black"> Lady Morene Morfaw </span>  , stand for challenging school education since 2003.
             </p>
 
             <div class="text-center">
                 <h1 class="font-bold font-secondary text-2xl">Our MOTTO</h1>
             </div>
-            <p class="font-bold text-center m-8">
+            <p class="font-normal font-primary text-md m-8">
                 We believe everyone should be equal, and we should all love and support each other and express ourselves the way we want to express ourselves and be whoever we want. Hence our motto:.
                 HARDWORK
                 The price of success is hard work, dedication to the job at hand, and the determination that whether we win or lose, we have applied the best of ourselves to the task at hand.
@@ -387,7 +389,7 @@
 
             <div class="flex justify-center flex-wrap p-auto w-full">
 
-                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden shadow-lg rounded inline-block my-5 mx-2">
+                <div data-aos="zoom-in-up" class="text-center max-w-sm overflow-hidden shadow-lg rounded inline-block my-5 mx-2">
                     <svg class="w-full h-32 text-purple-400" xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" viewBox="0 0 576 512">
                         <path d="M272 95.93c26.5 0 47.99-21.47 47.99-47.97S298.5 0 272 0C245.5 0 224 21.47 224 47.97S245.5 95.93 272 95.93zM209.7 357.3c-25.75-17.25-52.25-33.24-79.5-48.11L58.62 270.2L1.246 471.1c-4.875 16.1 4.1 34.74 22 39.62s34.63-4.998 39.5-21.99l36.63-128.1l60.63 40.37v78.86c0 17.62 14.38 31.99 32 31.99s32-14.37 32-31.99l.0022-95.93C224 373.2 218.6 363.2 209.7 357.3zM311.1 416c-13.88 0-25.95 8.863-30.33 21.86l-24.75 74.07h319.9l-101.9-206.3c-11.38-22.49-43.1-23.63-56.1-2.01l-31.89 54.21l-65.26-35.64l-24-121.2C288.1 161.3 263.2 127.7 227.1 109.7c-1-.4999-2.125-.625-3.125-1.125c-2.25-1.125-4.752-1.1-7.252-2.625C201.5 99.85 185.2 95.98 168.7 95.98H95.1c-9.25 0-18.05 4.061-24.18 10.93l-55.95 63.92c-.75 .9998-1.5 2.124-2.25 3.249c-8.875 13.1-3 32.87 11.63 40.74l336.6 184.3l-9.837 16.87H311.1zM105.9 204.1l-23.5-12.87l28.13-32.12h34.38L105.9 204.1zM199.5 256.1l34.9-41.28l13.5 67.61L199.5 256.1z"/></svg>
                     <div class="px-6 py-4">
@@ -397,7 +399,7 @@
                     </div>
                 </div>
 
-                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden shadow-lg rounded inline-block my-5 mx-2">
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden shadow-lg  inline-block my-5 mx-2">
                     <svg class="w-full h-32 text-green-400 " xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" viewBox="0 0 384 512">
                         <path d="M255.1 128c35.38 0 63.1-28.62 63.1-64s-28.62-64-63.1-64S191.1 28.62 191.1 64S220.6 128 255.1 128zM225.4 297.8c14 16.75 39 19.12 56.01 5.25l88.01-72c17-14 19.5-39.25 5.625-56.38c-14-17.12-39.25-19.5-56.38-5.625L261.3 216l-39-46.25c-15.38-18.38-39.13-27.88-64.01-25.38c-24.13 2.5-45.25 16.25-56.38 37l-49.38 92C29.13 317 43.88 369.8 86.76 397.1L131.5 432H40C17.88 432 0 449.9 0 472S17.88 512 40 512h208c34.13 0 53.76-42.75 28.25-68.25L166.4 333.9L201.3 269L225.4 297.8z"/>
                     </svg>
@@ -408,14 +410,14 @@
                     </div>
                 </div>
 
-                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden shadow-lg rounded inline-block my-5 mx-2">
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden shadow-lg  inline-block my-5 mx-2">
                     <svg class="w-full h-32 text-main" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
                       </svg>
                     <div class="px-6 py-4">
                       <div class="font-bold text-xl mb-2 font-secondary">PATIENCE.</div>
                       <p class="text-gray-700 text-base font-primary">
-                        Work hard. And have patience. Because no matter who you are, you’re going to get hurt in your career and you have to be patient to get through the injuries.                      </p>
+                        Work hard. And have patience. Because no matter who you are, you're going to get hurt in your career and you have to be patient to get through the injuries.                      </p>
                     </div>
                 </div>
 
@@ -426,7 +428,7 @@
             </div>
 
             <div class="my-6">
-                <p class="font-bold text-center m-8">
+                <p class="font-normal font-primary text-md m-8">
                     Our values convey the beliefs that positively influence our behaviour and the way we interact with individuals, groups and communities. They represent the deepest beliefs and sentiments to which we can aspire, and they shape our School community. These are the values that shape our School:
                 </p>
     
@@ -581,7 +583,7 @@
                 <h1 class="font-bold font-secondary text-2xl">DO YOU HAVE A MESSAGE FOR US?</h1>
             </div>
                 <form data-aos="zoom-in-up"
-               class="shadow-xl lg:w-[80%] h-100 mx-auto z-50 block p-10 rounded-lg shadow-lg bg-white">
+               class="shadow-xl lg:w-[80%] h-100 mx-auto z-50 block p-10 rounded-lg bg-white">
                     <div class="form-group mb-6">
                       <input type="text" class="form-control block
                         w-full

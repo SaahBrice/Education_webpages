@@ -4,274 +4,902 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="uikit/css/uikit.min.css">
-    <link rel="stylesheet" href="mycss.css">
+
+    <!-- AOS ::USE CDN in production-->
+    <link rel="stylesheet" href="assets/aos/dist/aos.css">
+    <script src="assets/aos/dist/aos.js"></script>
+    <!-- Jquery ::USE CDN in production-->
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="/static/styles.css">
+    <!-- main js -->
+    <script defer src="./static/main.js"></script>
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/tailwind.css">
+
+    <!-- tailwind elements -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
     <title>Rainbow Complex</title>
 </head>
-<body>
+<body class="overflow-x-hidden" >
+    <header id="header" class="bg-main p-6 z-50 w-100 block">
+        <div class="flex items-center justify-around flex-wrap ">
+            <img class="h-32" src="images/landing_page_images/rainbow_logo.png" alt="">
+            <h1 class="text-center font-black text-4xl md:text-5xl">Dedicated to exellence since <span>2003</span></h1>
+        </div>
 
-    <!-- ################## THIS ARE THE HEADER SECTIONS ###################-->
-    <header class="page-header_1  uk-background-default uk-visible@m uk-visi">
-        <div class="uk-container uk-container-expand uk-height-1-1">
-          <nav class="uk-height-1-1" uk-navbar>
-            <div class=" uk-navbar-center">
-                <a href="" class="uk-flex uk-flex-center logo_image">
-                    <img width="125" height="125" src="images/landing_page_images/rainbow_logo.png" alt="school logo">
-                    <p class="slogan_text">DEDICATED TO EXCELLENCE SINCE 2003</p>
-                  </a>
+        <nav id="navbar" class="group transition-all ease-in-out delay-150  p-4 md:p-8  z-50 w-full hidden md:flex items-center justify-between md:justify-around ">
+            <img class="h-16 inline md:hidden" src="images/landing_page_images/rainbow_logo.png" alt="">
+            
+            <div id="navbar-items" class="text-lg text-primary text-complimentary hidden md:flex items-center justify-between md:justify-around w-full">
+                
+                <div id="close-menu" class="absolute top-2 right-2 hidden cursor-pointer">
+                    <svg class="text-complimentary  w-full h-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+                      </svg>
+                </div>
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 hover:text-accent mr-4 font-bold">
+                Schools
+                </a>
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 hover:text-accent mr-4 font-bold">
+                Gallery
+                </a>
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 hover:text-accent font-bold">
+                Why Us?
+                </a>
+                <a href="#" class="block mt-4 lg:inline-block lg:mt-0 hover:text-accent font-bold">
+                    Login
+                </a>
+
             </div>
 
+            <div id="mobile-menu" class="w-50 md:hidden cursor-pointer">
+                <!-- lines menue -->
+                <svg class="text-complimentary  w-full h-12 font-black " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
 
-          </nav>
-        </div>
-      
+                <!-- vertical 3 dots menue -->
+                <svg class="text-complimentary w-full h-12 font-medium hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                  </svg>
+
+            </div>
+            
+            
+            
+        </nav>
+
     </header>
-      
-    <header class="page-header  uk-background-default" uk-sticky>
-        <div class="uk-container uk-container-expand uk-height-1-1">
-          <nav class="uk-navbar-container uk-height-1-1 uk-navbar-transparent" uk-navbar>
-      
-            <ul class="uk-navbar-nav uk-navbar-center uk-visible@m">
-              <li class="multi ">
-                <a href="">
-                  SCHOOLS
-                  <span uk-icon="icon: chevron-down"></span>
-                </a>
-      
-                <div class="uk-navbar-dropdown" uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify; offset: 10">
-                  <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-3">
-                    <li>
 
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom "><a href="#">SECONDARY SCHOOL</a></li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                    <li>
-
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom "><a href="#">PRIMARY SCHOOL</a></li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                    <li>
-
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom "><a href="#">NURSERY SCHOOL</a></li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="">
-                <a class="uk-text-white" href="">APPLY</a>
-              </li>
-              <li>
-                <a href="">WHY US?</a>
-              </li>
-              <li>
-                <a href="">GALLERY</a>
-              </li>
-              <li>
-                <a href="">LOGIN</a>
-              </li>
-              <li class="multi">
-                <a href="">
-                  CONTACTS
-                  <span uk-icon="icon: chevron-down"></span>
-                </a>
-      
-                <div class="uk-navbar-dropdown " uk-dropdown="boundary: .uk-navbar-nav; boundary-align: true; pos: bottom-justify; offset: 10">
-                  <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-3">
-                    <li>
-
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom contact_text">raibicol123@gmail.com</li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                    <li>
-
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom contact_text">+237-679-434-833</li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                    <li>
-
-                      <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-top">
-                        <li class="uk-nav-header uk-margin-small-bottom contact_text">+237-677-660-293</li>
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                        <!--<li><a href="#">Build</a></li>-->
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-
-            <div class="uk-navbar-center">
-                <a href="" class="uk-flex uk-flex-left uk-padding uk-hidden@m">
-                    <img width="50" height="50" src="images/landing_page_images/rainbow_logo.png" alt="school logo">
-                </a>
-                <p class=" uk-hidden@m">WE SAY, WE DO AND YOU SEE</p>
-                <button class="uk-margin-left uk-hidden@m uk-padding" uk-toggle="target: #offcanvas" uk-icon="icon: menu" type="button" aria-label="Toggle Mobile Menu">
-                </button> 
+    <main class="w-full">
+        <section id="carousel" class="carousel slide relative w-100 h-100 m-0" data-bs-ride="carousel">
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+                ></button>
+                <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+                ></button>
+                <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+                ></button>
             </div>
-          </nav>
-        </div>
-      
-        <div class="offcanvas uk-hidden@m" id="offcanvas" uk-offcanvas="flip: true; overlay: true; mode: reveal">
-          <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close aria-label="Close Mobile Menu"></button>
-      
-            <ul class="top-menu uk-nav uk-margin-top">
-              <li>
-                <a href="">
-                  Platform
-                </a>
-                <ul class="sub-menu uk-nav">
-                  <li class="uk-nav-header uk-text-bold">For Companies</li>
-                  <li><a href="#">Build</a></li>
-                  <li><a href="#">Train</a></li>
-                  <li><a href="#">Compare</a></li>
-                </ul>
-                <ul class="sub-menu uk-nav">
-                  <li class="uk-nav-header uk-text-bold">For Individuals</li>
-                  <li><a href="#">Build</a></li>
-                  <li><a href="#">Train</a></li>
-                  <li><a href="#">Compare</a></li>
-                </ul>
-                <ul class="sub-menu uk-nav">
-                  <li class="uk-nav-header uk-text-bold">For Family</li>
-                  <li><a href="#">Build</a></li>
-                  <li><a href="#">Train</a></li>
-                  <li><a href="#">Compare</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">Customers</a>
-              </li>
-              <li>
-                <a href="">Solutions</a>
-                <ul class="sub-menu uk-nav">
-                  <li class="uk-nav-header uk-text-bold">Business</li>
-                  <li><a href="#">For Marketing</a></li>
-                  <li><a href="#">For Sales</a></li>
-                </ul>
-                <ul class="sub-menu uk-nav">
-                  <li class="uk-nav-header uk-text-bold">Education</li>
-                  <li><a href="#">For Teachers</a></li>
-                  <li><a href="#">For Students</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="">Pricing</a>
-              </li>
-              <li>
-                <a href="">Resources</a>
-                <ul class="sub-menu uk-nav">
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Documentation</a></li>
-                  <li><a href="#">FAQ</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
-
-
-    <!-- ################# THIS IS THE FIRST IMAGE SECTION ####################-->
-
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="ratio: 7:3; animation: slide; autoplay: true; autoplay-interval:5000; pause-on-hover:true;">
-
-        <ul class="uk-slideshow-items">
-            <li>
-                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
-                    <img src="images/scroll_images/1.JPG" alt="" uk-cover>
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active relative float-left w-full">
+                <img
+                    src="images/scroll_images/1.JPG"
+                    class="block w-full "
+                    alt="..."
+                />
+                <div class="carousel-caption hidden md:block top-50 absolute text-center">
+                    <h5 class="text-xl capitalize">WELCOME TO RAINBOW BILINGUAL SCHOOL COMPLEX</h5>
+                    <p>Rainbow Bilingual School Complex is an educational Eldorado in the city of Dschang, offering Moral and Quality education (from kindergarten to secondary) to children of both the rich and the poor.</p>
                 </div>
-                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
-                <div class="uk-position-center uk-position-medium uk-text-center">
-                    <div uk-slideshow-parallax="scale: 1,1,0.8">
-                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
-                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                <img
+                    src="images/scroll_images/2.JPG"
+                    class="block w-full"
+                    alt="..."
+                />
+                <div class="carousel-caption hidden md:block absolute text-center">
+                    <h5 class="text-xl capitalize">WELCOME TO RAINBOW BILINGUAL SCHOOL COMPLEX</h5>
+                    <p>Our dream was and remains to have a school where both the children of the rich and the poor could Study together in a good atmosphere.
+                        This dream has become a reality.</p>
+                </div>
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                <img
+                    src="images/scroll_images/3.JPG"
+                    class="block w-full"
+                    alt="..."
+                />
+                <div class="carousel-caption hidden md:block absolute text-center">
+                    <h5 class="text-xl capitalize">WELCOME TO RAINBOW BILINGUAL SCHOOL COMPLEX</h5>
+                    <p>Rainbow School is there for all. We offer holistic education. We do not train only the heads but we train the students to be exemplary citizens of tomorrow.</p>
+                </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+            >
+                <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+            >
+                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+              
+        </section>
+
+
+
+        <!-- introduction section -->
+
+        <section id="welcome" class="mt-8">
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">WELCOME TO RAINBOW BILINGUAL SCHOOL COMPLEX</h1>
+
+                <p class="font-normal font-primary text-md m-8">
+                    Rainbow Bilingual School Complex is an educational Eldorado in the city of Dschang, offering Moral and Quality education (from kindergarten to secondary) to children of both the rich and the poor.
+
+                    Our dream was and remains to have a school where both the children of the rich and the poor could Study together in a good atmosphere.
+                    This dream has become a reality.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <h1 class="font-bold font-secondary m-6 text-2xl">Education at RAIBICOL </h1>
+            </div>
+
+            <div>
+                <ul class="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4 md:mx-4" id="tabs-tabFill"
+                role="tablist">
+                <li class="nav-item flex-auto text-center" role="presentation">
+                  <a href="#tabs-education" class="
+                    nav-link
+                    w-full
+                    block
+                    font-bold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    border-x-0 border-t-0 border-b-2 border-transparent
+                    px-6
+                    py-3
+                    my-2
+                    border-blue-500
+                      border-l-2
+                    bg-slate-300
+                    text-accent
+                    hover:border-transparent hover:bg-main hover:text-complimentary
+                    focus:border-transparent focus:bg-complimentary focus:text-main
+                    " 
+                    id="tabs-education-fill" data-bs-toggle="pill" data-bs-target="#tabs-education" role="tab"
+                    aria-controls="tabs-education" aria-selected="true">Education</a>
+                </li>
+                <li class="nav-item flex-auto text-center" role="presentation">
+                  <a href="#tabs-preschool" class="
+                    nav-link
+                    w-full
+                    block
+                    font-bold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    border-x-0 border-t-0 border-b-2 border-transparent
+                    px-6
+                    py-3
+                    my-2
+                    border-blue-500
+                      border-l-2
+                    bg-slate-300
+                    text-accent
+                    hover:border-transparent hover:bg-main hover:text-complimentary
+                    focus:border-transparent focus:bg-complimentary focus:text-main
+                  " id="tabs-preschool-fill" data-bs-toggle="pill" data-bs-target="#tabs-preschool" role="tab"
+                    aria-controls="tabs-preschool" aria-selected="false">Nursery School</a>
+                </li>
+                <li class="nav-item flex-auto text-center" role="presentation">
+                  <a href="#tabs-primaryschool" class="
+                    nav-link
+                    w-full
+                    block
+                    font-bold
+                    text-xs
+                    leading-tight
+                    uppercase
+                    border-x-0 border-t-0 border-b-2 border-transparent
+                    px-6
+                    py-3
+                    my-2
+                    border-blue-500
+                    border-l-2
+                    bg-slate-300
+                    text-accent
+                    hover:border-transparent hover:bg-main hover:text-complimentary
+                    focus:border-transparent focus:bg-complimentary focus:text-main
+                  " id="tabs-primaryschool-fill" data-bs-toggle="pill" data-bs-target="#tabs-primaryschool" role="tab"
+                    aria-controls="tabs-primaryschool" aria-selected="false">Primary School</a>
+                </li>
+                <li class="nav-item flex-auto text-center" role="presentation">
+                    <a href="#tabs-secschool" class="
+                      nav-link
+                      w-full
+                      block
+                      font-bold
+                      text-xs
+                      leading-tight
+                      uppercase
+                      border-x-0 border-t-0 border-b-2 border-transparent
+                      px-6
+                      py-3
+                      my-2
+                      border-blue-0
+                      border-l-2
+                      bg-slate-300
+                        text-accent
+                        hover:border-transparent hover:bg-main hover:text-complimentary
+                        focus:border-50transparent focus:bg-complimentary focus:text-main
+                    " id="tabs-secschool-fill" data-bs-toggle="pill" data-bs-target="#tabs-secschool" role="tab"
+                      aria-controls="tabs-secschool" aria-selected="false">Secondary School</a>
+                  </li>
+              </ul>
+
+              <div class="tab-content my-5 md:mx-4" id="tabs-tabContentFill">
+
+                <div class="tab-pane fade show  bg-main active w-[100%] md:w-full sm:w-full lg:p-12 mx-auto" id="tabs-education" role="tabpanel" aria-labelledby="tabs-education-fill">
+                    
+                    <div class="flex flex-col items-center md:flex-row w-full sm:mx-0 mx-auto p-8 rounded" >
+                        <img class="object-cover w-full lg:w-[50%] h-96" src="https://picsum.photos/200/300?random=5" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl text-accent font-bold font-secondary">Rainbow Education</h5>
+                            <div class="text-complimentary">
+                                <p class="mb-3 font-primary font-normal text-complimentary">
+                                    <svg class="inline text-complimentary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                      </svg>
+                                    Uniquely holistic - from Nursery school to Secondary school</p>
+                                <p class="mb-3 font-primary font-normal text-complimentary">
+                                    <svg class="inline text-complimentary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                      </svg>
+                                    Bilingualism - for a life in a globalized world</p>
+                                <p class="mb-3 font-primary font-normal text-complimentary ">
+                                    <svg class="inline text-complimentary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                      </svg>
+                                    Immersion Method - Education with globally recognized methods</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade lg:p-12 mx-auto  bg-main w-[100%]" id="tabs-preschool" role="tabpanel" aria-labelledby="tabs-preschool-fill">
+                    
+                    <div class="flex flex-col items-center  md:flex-row w-full mx-auto" >
+                        <img class="object-cover w-full lg:w-[50%] h-96" src="https://picsum.photos/200/300?random=5" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold font-secondary  text-accent">Rainbow Bilingual Preschool</h5>
+                            <div>
+                                <p class="mb-3 font-primary font-normal text-complimentary">
+                                    <svg class="w-20 h-20 m-6 ml-12 text-complimentary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                      </svg>
+                                    Bilingual Learning based on the Hessian and Cambridge International Curriculum.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade lg:p-12 mx-auto bg-main w-[100%]" id="tabs-primaryschool" role="tabpanel" aria-labelledby="tabs-primaryschool-fill">
+                    
+                    <div class="flex flex-col items-center  md:flex-row w-full mx-auto" >
+                        <img class="object-cover w-full lg:w-[50%] h-96" src="https://picsum.photos/200/300?random=5" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold font-secondary  text-accent">Rainbow Bilingual Primary School</h5>
+                            <div clas="text-complimentary">
+                                <p class="mb-3 font-primary font-normal  text-complimentary ">
+                                    <svg class="w-20 h-20 m-6 ml-12" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                      </svg>
+                                    Comprehensive support and a smooth start into primary school.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade lg:p-12 mx-auto bg-main  w-[100%] " id="tabs-secschool" role="tabpanel" aria-labelledby="tabs-secschool-fill">
+                    
+                    <div class="flex flex-col items-center md:flex-row w-full mx-auto" >
+                        <img class="object-cover w-full lg:w-[50%] h-96" src="https://picsum.photos/200/300?random=5" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold text-accent font-secondary">Rainbow Secondary School</h5>
+                            <div>
+                                <p class="mb-3 font-primary font-normal text-complimentary">
+                                    <svg class="w-20 h-20 m-6 ml-12 text-complimentary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                                      </svg>
+                                    Preparing the path to universities of the world with our programs.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+
+          
+        </section>
+
+
+        <!-- about raibicol -->
+
+        <section id="about">
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">About RAIBICOL</h1>
+            </div>
+
+            <div class="flex flex-wrap justify-around m-4">
+                <div class="w-[380px] p-3 bg-main rounded my-4 text-complimentary" data-aos="zoom-in-up">
+                    <iframe class="m-0 w-full" width="380" height="300" src="https://www.youtube.com/embed/F4pwIvsROOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+                        <h4 class="font-bold">Word from the founders</h4>
+                        <p>Rainbow School is there for all. We offer holistic education. We do not train only the heads but we train the students to be exemplary citizens of tomorrow.</p>
                     </div>
                 </div>
-            </li>
-            <li>
-                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
-                    <img src="images/scroll_images/2.JPG" alt="" uk-cover>
-                </div>
-                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
-                <div class="uk-position-center uk-position-medium uk-text-center">
-                    <div uk-slideshow-parallax="scale: 1,1,0.8">
-                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
-                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+
+                <div class="w-[380px] p-3 bg-main rounded my-4 text-complimentary" data-aos="zoom-in-up">
+                    <iframe class="m-0 w-full" width="380" height="300" src="https://www.youtube.com/embed/IAK1MYIPJO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+                        <h4 class="font-bold">Admissions into RAIBICOL</h4>
+                        <p>Admissions in the nursery, primary and secondary sections are currently open. Apply Offline at the corresponding facility or Online.</p>
                     </div>
                 </div>
-            </li>
-            <li>
-                <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse" uk-slideshow-parallax="scale: 1.2,1.2,1">
-                    <img src="images/scroll_images/3.JPG" alt="" uk-cover>
-                </div>
-                <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
-                <div class="uk-position-center uk-position-medium uk-text-center">
-                    <div uk-slideshow-parallax="scale: 1,1,0.8">
-                        <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
-                        <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+
+            </div>
+            <p class="font-normal font-primary text-md text-center m-8">
+                With their combined experience in education, the Managing Partners of Rainbow Biligual Complex School, <span class="font-black">Chief Charles Morfaw </span> and his wife, <span class="font-black"> Lady Morene Morfaw </span>  , stand for challenging school education since 2003.
+            </p>
+
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">Our MOTTO</h1>
+            </div>
+            <p class="font-normal font-primary text-md text-center m-8">
+                We believe everyone should be equal, and we should all love and support each other and express ourselves the way we want to express ourselves and be whoever we want. Hence our motto:.
+                HARDWORK
+                The price of success is hard work, dedication to the job at hand, and the determination that whether we win or lose, we have applied the best of ourselves to the task at hand.
+            </p>
+
+            <div class="flex justify-center flex-wrap p-auto w-full">
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm overflow-hidden hover:shadow-lg rounded inline-block my-5 mx-2">
+                    <svg class="w-full h-32 text-purple-400" xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" viewBox="0 0 576 512">
+                        <path d="M272 95.93c26.5 0 47.99-21.47 47.99-47.97S298.5 0 272 0C245.5 0 224 21.47 224 47.97S245.5 95.93 272 95.93zM209.7 357.3c-25.75-17.25-52.25-33.24-79.5-48.11L58.62 270.2L1.246 471.1c-4.875 16.1 4.1 34.74 22 39.62s34.63-4.998 39.5-21.99l36.63-128.1l60.63 40.37v78.86c0 17.62 14.38 31.99 32 31.99s32-14.37 32-31.99l.0022-95.93C224 373.2 218.6 363.2 209.7 357.3zM311.1 416c-13.88 0-25.95 8.863-30.33 21.86l-24.75 74.07h319.9l-101.9-206.3c-11.38-22.49-43.1-23.63-56.1-2.01l-31.89 54.21l-65.26-35.64l-24-121.2C288.1 161.3 263.2 127.7 227.1 109.7c-1-.4999-2.125-.625-3.125-1.125c-2.25-1.125-4.752-1.1-7.252-2.625C201.5 99.85 185.2 95.98 168.7 95.98H95.1c-9.25 0-18.05 4.061-24.18 10.93l-55.95 63.92c-.75 .9998-1.5 2.124-2.25 3.249c-8.875 13.1-3 32.87 11.63 40.74l336.6 184.3l-9.837 16.87H311.1zM105.9 204.1l-23.5-12.87l28.13-32.12h34.38L105.9 204.1zM199.5 256.1l34.9-41.28l13.5 67.61L199.5 256.1z"/></svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">HARDWORK</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        The price of success is hard work, dedication to the job at hand, and the determination that whether we win or lose, we have applied the best of ourselves to the task at hand.                      </p>
                     </div>
                 </div>
-            </li>
-        </ul>
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden hover:shadow-lg  inline-block my-5 mx-2">
+                    <svg class="w-full h-32 text-green-400 " xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" viewBox="0 0 384 512">
+                        <path d="M255.1 128c35.38 0 63.1-28.62 63.1-64s-28.62-64-63.1-64S191.1 28.62 191.1 64S220.6 128 255.1 128zM225.4 297.8c14 16.75 39 19.12 56.01 5.25l88.01-72c17-14 19.5-39.25 5.625-56.38c-14-17.12-39.25-19.5-56.38-5.625L261.3 216l-39-46.25c-15.38-18.38-39.13-27.88-64.01-25.38c-24.13 2.5-45.25 16.25-56.38 37l-49.38 92C29.13 317 43.88 369.8 86.76 397.1L131.5 432H40C17.88 432 0 449.9 0 472S17.88 512 40 512h208c34.13 0 53.76-42.75 28.25-68.25L166.4 333.9L201.3 269L225.4 297.8z"/>
+                    </svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">PRAYERS.</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        If you believe in prayer at all, expect God to hear you. If you do not expect, you will not have. God will not hear you unless you believe He will hear you; but if you believe He will, He will be as good as your faith.                      </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden hover:shadow-lg  inline-block my-5 mx-2">
+                    <svg class="w-full h-32 text-main" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+                      </svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">PATIENCE.</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        Work hard. And have patience. Because no matter who you are, you're going to get hurt in your career and you have to be patient to get through the injuries.                      </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">Our VALUES</h1>
+            </div>
+
+            <div class="my-6 text-center">
+                <p class="font-normal font-primary text-md m-8">
+                    Our values convey the beliefs that positively influence our behaviour and the way we interact with individuals, groups and communities. They represent the deepest beliefs and sentiments to which we can aspire, and they shape our School community. These are the values that shape our School:
+                </p>
     
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                <div class="flex flex-wrap justify-center">
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-1" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Learning</span>
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-2" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Leadership</span>
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-3" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Integrity</span>
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-4" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Spirituality</span>
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-5" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Excellence</span>
+                    <span data-aos="zoom-in-up" data-tooltip-target="tooltip-6" class="px-10 py-2 cursor-pointer rounded-3xl bg-main text-complimentary m-4">Community</span>
+                </div>
+               
+                   
+                
+            </div>
+
+        </section>
+
+        <!-- communtity -->
+        <section id="community">
+
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">COMMUNITY</h1>
+
+                <p class="font-normal font-primary text-md m-8">
+                    The Rainbow Bilingual School Complex Community goes beyond education. In the evening our students do sports, 
+                    make music and explore their environment together, thereby strengthening their team skills.                
+                </p>
+            </div>
+
+            <div class="lg:m-10 m-2 flex justify-around flex-wrap text-center ">
+                
+                <div data-aos="zoom-in-up" class="transition-all delay-200 ease-in-out group hover:bg-main max-w-sm w-100 bg-complimentary rounded-lg  shadow-md  my-4 lg:m-4">
+                    <img class="rounded-t-lg w-full h-64" src="https://picsum.photos/200/300?random=9" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-md text-main font-bold font-secondary
+                            group-hover:text-accent
+                            ">Reading Club</h5>
+                        </a>
+                        <p class="mb-3 text-md text-accent font-normal font-primary group-hover:text-complimentary">
+                            Having fun while reading - in a playful manner and based on the scientifically acknowledged Immersion Method.                        </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="transition-all delay-200 group hover:bg-main max-w-sm bg-complimentary rounded-lg shadow-md  my-4 lg:m-4">
+                    <img class="rounded-t-lg w-full h-64" src="https://picsum.photos/200/300?random=11" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-md text-main font-bold font-secondary group-hover:text-accent">Science Club</h5>
+                        </a>
+                        <p class="mb-3 text-md text-accent font-normal font-primary group-hover:text-complimentary">
+                            Transform Thoeries to Practices through several easy experiments
+                        </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="transition-all delay-200 group hover:bg-main max-w-sm bg-complimentary rounded-lg  shadow-md my-4  lg:m-4">
+                    <img class="rounded-t-lg w-full h-64" src="https://picsum.photos/200/300?random=10" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-md text-main font-bold font-secondary group-hover:text-accent">Jambory Club</h5>
+                        </a>
+                        <p class="mb-3 text-md text-accent font-normal font-primary group-hover:text-complimentary">
+                            Building up a better sense of body and rhythm and training their flexibility - Jambory is about much more than just dancing..
+                        </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="transition-all delay-200 group hover:bg-main max-w-sm bg-complimentary rounded-lg shadow-md my-4 lg:m-4">
+                    <img class="rounded-t-lg w-full h-64" src="https://picsum.photos/200/300?random=13" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-md text-main font-bold font-secondary group-hover:text-accent">Music Club</h5>
+                        </a>
+                        <p class="mb-3 text-md text-accent font-normal font-primary group-hover:text-complimentary">
+                            Dive into the world of music and get to know various instruments such as the recorder, keyboard, percussion instruments and also your own voice.                        
+                        </p>
+                    </div>
+                </div>
     
-    </div>
+            </div>
+
+        </section>
+
+        <!-- sucess charts -->
+        <section id="info" class="my-6">
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">OUR SUCCESS RATE</h1>
+
+                <p class="font-normal font-primary text-md m-8">
+                    It is a declared goal of RAINBOW School to support all students according to their potential and their limitations.
+                </p>
+            </div>
+
+            <div data-aos="zoom-in-up" class="w-100 h-full md:h-98 md:w-[60%] shadow-lg rounded-lg overflow-hidden mx-auto">
+                <canvas class="my-8" id="chartBar" ></canvas>
+            </div>
+
+        </section>
+
+        <!-- information? -->
+        <section id="info">
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">GET TO KNOW US.</h1>
+            </div>
+            
+            <div class="flex justify-around flex-wrap">
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden hover:shadow-lg my-5">
+                    <svg class="w-full h-32 text-main" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                        <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                      </svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">Contact.</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        Do you have questions or do you need further information? We are looking forward to you contacting us.
+                      </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden hover:shadow-lg my-5">
+                    <svg class="w-full h-32 text-main" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                        <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                      </svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">Apply.</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        Learn more about our Application process                      </p>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in-up" class="text-center max-w-sm rounded overflow-hidden hover:shadow-lg my-5">
+                    <svg class="w-full h-32 text-main" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                        <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
+                      </svg>
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2 font-secondary">Open Hour</div>
+                      <p class="text-gray-700 text-base font-primary">
+                        Gain your own impression of Rainbow School Complex. We are looking forward to meeting you and your child on our Open Day.                      </p>
+                    </div>
+                </div>
 
 
+            </div>
+        </section>
 
+        <!-- contacts -->
 
+        <section id="contacts" class="w-100 p-4 text-center">
 
+            <div class="text-center">
+                <h1 class="font-bold font-secondary text-xl">DO YOU HAVE A MESSAGE FOR US?</h1>
+            </div>
+                <form data-aos="zoom-in-up"
+               class="shadow-xl lg:w-[80%] h-100 mx-auto z-50 block p-10 rounded-lg bg-white">
+                    <div class="form-group mb-6">
+                      <input type="text" class="form-control block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        h-12
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                        placeholder="Name">
+                    </div>
 
+                    <div class="form-group mb-6">
+                      <input type="email" class="form-control block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        h-12
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+                        placeholder="Email address">
+                    </div>
 
+                    <div class="form-group mb-6">
+                        <input type="text" class="form-control block
+                          w-full
+                          px-3
+                          py-1.5
+                          text-base
+                          font-normal
+                          text-gray-700
+                          bg-white bg-clip-padding
+                          border border-solid border-gray-300
+                          rounded
+                          transition
+                          ease-in-out
+                          m-0
+                          h-12
+                          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                          placeholder="Subject">
+                      </div>
 
+                    <div class="form-group mb-6">
+                      <textarea
+                      class="
+                        form-control
+                        block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        h-48
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      "
+                      id="exampleFormControlTextarea13"
+                      rows="3"
+                      placeholder="Message"
+                    ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="
+                      px-16
+                      py-4
+                      bg-main
+                      text-xs
+                      leading-tight
+                      uppercase
+                      rounded
+                      shadow-md
+                      hover:bg-main hover:shadow-lg
+                      focus:border-accent focus:shadow-lg focus:outline-none focus:ring-0
+                      transition
+                      duration-150
+                      font-bold
+                      text-accent
+                      ease-in-out">Send Your Message</button>
+                  </form>
+            
+        </section>
 
-      <section class="banner uk-flex uk-flex-middle uk-text-center">
-        <div class="uk-container">
-          <h1>A Responsive Mega Menu With UIkit</h1>
+        <!-- news section -->
+        <section id="news" class="text-center p-8">
+
+            <div class="text-center">
+                <h1 class="font-bold font-secondary m-6 text-xl">RAINBOW SCHOOL  <span class="font-black">NEWS.</span> </h1>
+            </div>
+
+            <div class="flex justify-around flex-wrap">
+
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+                  
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+                <div data-aos="zoom-in-up" class="group hover:bg-main transition-all max-w-sm rounded overflow-hidden shadow-lg my-5">
+                    <img class="w-full h-48" src="https://picsum.photos/200/300?random=3" alt="Sunset in the mountains">
+                    <div class="px-6 py-4 text-accent group-hover:text-complimentary">
+                      <div class="font-bold text-lg mb-2 font-secondary">The Coldest Sunset</div>
+                      <p class="text-base font-primary">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                      </p>
+                    </div>
+                    <a href="" class="inline-block px-6 py-2 rounded text-md font-semibold bg-main text-accent m-4 
+                    group-hover:bg-complimentary group-hover:text-accent">Read More</a>
+                  </div>
+
+ 
+
+        </section>
+    </main>
+
+    <footer id="footer" class="block bg-main shadow-xl p-8">
+        <div  class="flex justify-between  flex-wrap">
+            <div class="p-5 md:block sm:block md:w-96 sm:w-100 lg:w-[400px] text-center">
+                <h1 class="font-secondary text-xl font-black text-accent">RAINBOW COMPLEX</h1>
+                <img src="images/landing_page_images/rainbow_logo.png" alt="..." class="w-32 h-auto mx-auto pt-4">
+                <p class="p-2 text-complimentary font-medium font-primary">
+                    Rainbow Bilingual Complex is the most prestigious primary school in the city of Dschang. Our dream was and remains to have a school where both the children of the rich and the poor could study together in a good atmosphere. Building on a proud tradition, Rainbow Bilingual complex fosters excellence in its students, providing a meaningful and fulfilling education across three campuses.
+                </p>
+            </div>
+            <div class="p-5">
+                <h1 class="font-secondary text-accent text-xl font-black">Contact</h1>
+                <div class="pt-2 text-complimentary" >
+                    <ul class="text-left">
+                        <li class="py-5 ">
+                            <svg class="h-8 w-8 inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            
+                            <a href="" class="text-complimentary">BP 402 Dschang / Cameroon</a>
+                        </li>
+                        <li class="py-5 relative">
+                            <svg class="h-8 w-8 inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-inbound-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"/>
+                              </svg>
+                            <a href="" class="text-complimentary absolute left-8 bottom-1">
+                                +237-679434833 <br>
+                                +237-653113140 <br>
+                                +237-677684990
+                            </a>
+                        </li>
+                        <li class="py-5">
+                            <svg class="h-8 w-8 inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                              </svg>
+                            <a href="" class="text-complimentary">raibicol123@gmail.com</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-5">
+                <h1 class="font-secondary text-accent text-xl font-black">Locations</h1>
+                <div class="pt-2">
+                    <div class="py-3 text-complimentary">Foreke-Dschang</div>
+                    <div class="py-3 text-complimentary">Foto-Dschang</div>
+                    <div class="py-3 text-complimentary">Letsa-Foto</div>
+
+                </div>
+                
+            </div>
+
+            <div class="p-5">
+                <h1 class="font-secondary text-accent text-xl font-black">Quick Links</h1>
+                <div class="pt-2">
+                    <a href="" class="py-3 text-l text-complimentary inline-block">Schools</a>
+                    <a href="" class="py-3 text-l text-complimentary block">Apply</a>
+                    <a href="" class="py-3 text-l text-complimentary block">Update your details</a>
+                    <a href="" class="py-3 text-l text-complimentary block">Term dates</a>
+                    <a href="" class="py-3 text-l text-complimentary"></a>
+                </div>
+            </div>
+
         </div>
-      </section>
-      
-      <footer class="page-footer">
-        <span>made by </span>
-        <a href="https://georgemartsoukos.com/" target="_blank">
-          <img width="24" height="24" src="https://assets.codepen.io/162656/george-martsoukos-small-logo.svg" alt="George Martsoukos logo">
-        </a>
-      </footer>
 
+        <hr style="width: 80%; height: 4px;" class="mx-auto my-3">
 
+        <div class="credits text-center font-primary  flex flex-wrap-reverse justify-around">
+            <div class="sm:w-100 md:w-100 my-4"  >
+                <p class="p-4 m-0"> <span class="font-bold">&copy;Copyright 2022.  Rainbow School Complex </span>. All rights reserved. </p> 
+                <p>Designed by <a href="https://glenn-po.github.io" class="font-bold text-complimentary">Glenn-Po</a></p>
+            </div>
 
+            <div class="my-4">
+                <div class="flex justify-around items-center">
+                    <a href="" class="bg-complimentary  delay-200 text-accent hover:text-main hover:rounded-3xl p-1.5 m-2 rounded">
+                        <svg  class="h-8 w-8 "  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                          </svg>
+                    </a>
+                    <a href="" class="bg-complimentary  delay-200 text-accent hover:text-main hover:rounded-3xl p-1.5 m-2 rounded">
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                    </a>
+                    <a href="" class="bg-complimentary  delay-200 text-accent hover:text-main hover:rounded-3xl p-1.5 m-2 rounded">
+                        <svg class="h-8 w-8 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                          </svg>
+                    </a>
+                    <a href="" class="bg-complimentary  delay-200 text-accent hover:text-main hover:rounded-3xl p-1.5 m-2 rounded">
+                        <svg class="h-8 w-8 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                          </svg>
+                    </a>
+                    <a href="" class="bg-complimentary  delay-200 text-accent hover:text-main hover:rounded-3xl p-1.5 m-2 rounded">
+                        <svg class="h-8 w-8 " xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                          </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-    <script src="uikit/js/uikit.min.js"></script>
-    <script src="uikit/js/uikit-icons.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/js/uikit-icons.min.js"></script>
+            <a href="#" class="fixed right-4 bottom-4 text-slate-900">
+                <svg class="h-12 w-12 " xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+                </svg>
+            </a>
+    </footer>
+    
 </body>
 </html>

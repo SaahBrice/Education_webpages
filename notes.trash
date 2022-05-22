@@ -1,0 +1,34 @@
+A few adjustments we to work on;
+
+The mobile view is not the best.
+
+    🟢 The title "Dedicated to excellence" should auto adjust (by reducing size) and 
+    centralized at the bottom when on mobile view.
+
+    🟢 Not enough margin in the paragraph e.g in the paragraph of our motto
+
+    🟢reduce navbar buttons to a single button containing other buttons, 
+    (don't continuously show buttons as the are)
+
+Theme Generalities
+
+    🟢reduce the font-size if the titles
+
+    🟢use two colors in this theme, blue and white.
+
+    🟢All icons on white bg should be blue, all icons on blue bg should be white
+
+    🟢All text in white bg, in black and all text in blue bg in white
+    buttons in white bg in blue and in blue bg in white.
+
+    🟢change all font type to "Roboto"
+
+    🟢Hover effects: text change from black to blue in white bg and from white to black in blue bg
+    use same kind of icons on footer as on other sections and use same size of icon all through
+
+    Reduce size of chart
+    🟢use same kind of cards
+
+Animations
+    🟢 use one type of animation for all the entries
+    🟢add shadow on cards only when the mouse enters region

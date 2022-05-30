@@ -4,28 +4,37 @@ const navBarItems = jQuery('#navbar-items');
 const closeMenu = jQuery('#close-menu');
 const navBar = jQuery('#navbar');
 const header =  $('#header');
-const isSmallScreen = window.innerWidth <= 640;
+const isSmallScreen = () => window.innerWidth <= 640;
 
 $(window).on('scroll', function(ev){
     let top = $(window).scrollTop(),
         bottom = header.offset().top + header.outerHeight();
-
- 
-    
     if(bottom < top){//out of view
       navBar.removeClass('hidden')
-      navBar.addClass(`shadow-xl fixed top-0 right-0 left-0 bg-main ${isSmallScreen && 'flex'}`);
+      navBar.addClass(`flex shadow-xl fixed top-0 right-0 left-0 bg-main`);
     }
     else{
       navBar.addClass('hidden')
-      navBar.removeClass(`fixed shadow-xl bg-main ${isSmallScreen && 'flex'}`)
+      navBar.removeClass(`flex fixed shadow-xl bg-main`)
     }
 } 
 )
 
+$(window).on('resize', (_)=>{
+  console.log(window.innerWidth);
+  if(isSmallScreen()){
+    // navBar.addClass('flex');
+    console.log('hello world');
+  }
+  else{
+    closeMenu.addClass('hidden');
+    console.log("goodbye world");
+  }
+}
+)
 //mobile menu
 
-if(isSmallScreen) closeMenu.removeClass('hidden')
+if(isSmallScreen()) closeMenu.removeClass('hidden')
 
 if(closeMenu) closeMenu.on('click',  (ev)=>{navBarItems.addClass('hidden')});
 if(mobileMenu){

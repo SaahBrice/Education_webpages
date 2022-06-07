@@ -96,29 +96,35 @@
                 <h1 class="font-bold text-complimentary text-lg capitalize">Fill in the application form below</h1>
             </div>
                 <form data-aos="zoom-in-up"
-               class="mt-0 shadow-xl lg:w-[80%] h-100 mx-auto z-50 block p-10 rounded-lg bg-white">
+                    class="mt-0 shadow-xl lg:w-[80%] h-100 mx-auto z-50 block p-10 rounded-lg bg-white">
+                     
+                        <!-- name -->
                     <div class="form-group mb-6 text-left">
-                    <label for="ap-name" >Full Name <span class="text-red-600">*</span> </label>
-                      <input id="ap-name" type="text" class="form-control block
-                        w-full
-                        px-3
-                        py-1.5
-                        text-base
-                        font-normal
-                        text-gray-700
-                        bg-white bg-clip-padding
-                        border border-solid border-gray-300
-                        rounded
-                        transition
-                        ease-in-out
-                        m-0
-                        h-12
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
-                        placeholder="Name" required>
+                        <label for="ap-name" >Full Name <span class="text-red-600">*</span> </label>
+                        <input id="ap-name" type="text" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                             required>
                     </div>
 
-                    <div class="form-group mb-6">
-                      <input type="email" class="form-control block
+                        <!-- Date of Birth -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Date of Birth <span class="text-red-600">*</span> </label>
+                        <input type="date" 
+                        required
+                        class="form-control block
                         w-full
                         px-3
                         py-1.5
@@ -133,37 +139,340 @@
                         m-0
                         h-12
                         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
-                        placeholder="Email address">
+                        >
                     </div>
 
-                    <div class="form-group mb-6">
+                     <!-- Gender -->
+                     <div class="form-group mb-6 text-left">
+                        <label for="" >Gender <span class="text-red-600">*</span> </label>
+                        <select 
+                        class="form-control block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        h-12
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+                       required
+                        >
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        
+                    </div>
+
+                    <!-- Admission Class -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Admission Class <span class="text-red-600">*</span> </label>
+                        <select 
+                        class="form-control block
+                        w-full
+                        px-3
+                        py-1.5
+                        text-base
+                        font-normal
+                        text-gray-700
+                        bg-white bg-clip-padding
+                        border border-solid border-gray-300
+                        rounded
+                        transition
+                        ease-in-out
+                        m-0
+                        h-12
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+                       required
+                        >
+                            <option value="">Class 2</option>
+                            <option value="">Class 3</option>
+                            <option value="">Class 4</option>
+                            <option value="">Class 5</option>
+                            <option value="">Class 6</option>
+                        </select>
+                        
+                    </div>
+
+                    <!-- Physical Conditon -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Physical Condition <span class="text-red-600">*</span> </label>
+                        <input  type="text" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                             required>
+                    </div>
+
+                         <!-- Parent Name -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Parent's Name <span class="text-red-600">*</span> </label>
+                        <input  type="text" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                             required>
+                    </div>
+
+                    <!-- Parent's Contact -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Parent's Contact<span class="text-red-600">*</span> </label>
+                        <input  type="number" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                                required>
+                    </div>
+
+                            <!--Alternative Contact  -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Alternative Contact<span class="text-red-600">*</span> </label>
+                        <input  type="number" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                             required>
+                    </div>
+                    
+                    <!-- Parent's Email-->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Parent's Email<span class="text-red-600">*</span> </label>
+                        <input  type="email" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                                required>
+                    </div>
+
+                    <!-- Alternative Email -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Alternative Email<span class="text-red-600">*</span> </label>
+                        <input type="email" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                                required>
+                    </div>
+
+                    <!-- Town of Residence-->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Town of Residence<span class="text-red-600">*</span> </label>
                         <input type="text" class="form-control block
-                          cursor-pointer
-                          w-full
-                          px-3
-                          py-1.5
-                          text-base
-                          font-normal
-                          text-gray-700
-                          bg-white bg-clip-padding
-                          border border-solid border-gray-300
-                          rounded
-                          transition
-                          ease-in-out
-                          m-0
-                          h-12
-                          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
-                          placeholder="Subject">
-                      </div>
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                                required>
+                    </div>
+
+                    <!-- Previous School -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Previous School<span class="text-red-600">*</span> </label>
+                        <input type="text" class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            h-12
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                                required>
+                    </div>
+
+                    
+                    <!-- file entries -->
+                    
+                    <!-- Birth Certificate  -->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Birth Certificate<span class="text-red-600">*</span> </label>
+                        <input type="file"
+                        class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                            
+                        id="birth-certificate"
+                        required>
+                    </div>
+
+                    <!-- Previous report-->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > Previous class report card<span class="text-red-600">*</span> </label>
+                        <input type="file"
+                        class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                            
+                        id="previous-report"
+                        required>
+                    </div>
+
+                    <!-- Results slip-->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" > GCE results slip or printed page of results<span class="text-red-600">*</span> </label>
+                        <input type="file"
+                        class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                            
+                        id="previous-report"
+                        required>
+                    </div>
+
+                    <!-- Clinical Results-->
+                    <div class="form-group mb-6 text-left">
+                        <label for="" >Clinical card showing vaccination taken<span class="text-red-600">*</span> </label>
+                        <input type="file"
+                        class="form-control block
+                            w-full
+                            px-3
+                            py-1.5
+                            text-base
+                            font-normal
+                            text-gray-700
+                            bg-white bg-clip-padding
+                            border border-solid border-gray-300
+                            rounded
+                            transition
+                            ease-in-out
+                            m-0
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                            
+                        id="previous-report"
+                        required>
+                    </div>
+
+
 
                     <input 
                         class="
                         px-16
                         py-4
                         bg-main
-                        text-xs
-                        leading-tight
-                        uppercase
+                        text-base
+                        leading-snug
+                        text-complimentary
+                        capitalize
                         rounded
                         shadow-md
                         hover:bg-main hover:shadow-lg
@@ -171,7 +480,6 @@
                         transition
                         duration-150
                         font-bold
-                        text-accent
                         ease-in-out
                         cursor-pointer
                         "

@@ -3,38 +3,54 @@ const mobileMenu = jQuery('#mobile-menu');
 const navBarItems = jQuery('#navbar-items');
 const closeMenu = jQuery('#close-menu');
 const navBar = jQuery('#navbar');
-const header =  $('#header');
-const isSmallScreen = window.innerWidth <= 640;
+const header =  jQuery('#header');
+const isSmallScreen = () => window.innerWidth <= 640;
 
 $(window).on('scroll', function(ev){
     let top = $(window).scrollTop(),
         bottom = header.offset().top + header.outerHeight();
-
- 
-    
     if(bottom < top){//out of view
       navBar.removeClass('hidden')
-      navBar.addClass(`shadow-xl fixed top-0 right-0 left-0 bg-main ${isSmallScreen && 'flex'}`);
+      navBar.addClass(`flex shadow-xl fixed top-0 right-0 left-0 bg-main`);
     }
     else{
-      navBar.addClass('hidden')
-      navBar.removeClass(`fixed shadow-xl bg-main ${isSmallScreen && 'flex'}`)
+      navBar.addClass('hidden');
+      navBar.removeClass(`flex fixed shadow-xl bg-main`);
     }
 } 
-)
+);
+
+$(window).on('resize', (ev)=>{
+  // if(!isSmallScreen()){
+    navBarItems.removeClass(`fixed top-0 bottom-0 left-0 right-0 block bg-main z-10 p-12`);
+    navBarItems.addClass('flex');
+    closeMenu.addClass('hidden');
+  // }
+  // else{
+  //   navBarItems.addClass('hidden');
+  //   closeMenu.addClass('hidden');
+  // }
+});
 
 //mobile menu
+if(isSmallScreen()) {
+  closeMenu.removeClass('hidden');
+  closeMenu.addClass('block');
+}
 
-if(isSmallScreen) closeMenu.removeClass('hidden')
 
-if(closeMenu) closeMenu.on('click',  (ev)=>{navBarItems.addClass('hidden')});
+if(closeMenu) closeMenu.on('click',  (ev)=>{closeMenu.addClass('hidden'); navBarItems.addClass('hidden');});
 if(mobileMenu){
   mobileMenu.on('click', (ev) => {
     if(navBarItems.hasClass('hidden')){//currentl not showing
       navBarItems.removeClass('hidden');
-      navBarItems.addClass(`fixed block h-full  bottom-0 left-0 top-0  right-0 z-10 p-12 bg-main`);
+      navBarItems.addClass(`fixed top-0 bottom-0 left-0 right-0 block bg-main z-10 p-12`);
+      closeMenu.removeClass('hidden');
+      closeMenu.addClass('block');
     }
     else{
+      closeMenu.addClass('hidden');
+      closeMenu.removeClass('block');
       navBarItems.addClass('hidden');
     }
   }

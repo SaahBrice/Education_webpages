@@ -18,11 +18,11 @@ Start the html files with your browser
 # Home Page specifictations
 
 - Font: 
-    primary - poppins -> Roboto
-    secondary - raleway -> Roboto
+    - primary - poppins -> Roboto
+    - secondary - raleway -> Roboto
 
 - Colors
-    main  : blue
-    complement : white
-    accent: black
+    - main  : blue
+    - complement : white
+    - accent: black
 

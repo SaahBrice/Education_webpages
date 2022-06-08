@@ -32,3 +32,44 @@ Theme Generalities
 Animations
     🟢 use one type of animation for all the entries
     🟢add shadow on cards only when the mouse enters region
+
+
+
+=============🔴🔴🔴🔴=================
+Issues to revisit
+====================================
+🔴Restyle navbar esp. mobile view
+🔴Correct transitions not working issue
+
+
+Additions
+- Notice: eg admission
+- get results [use pop up]
+
+🟢🟢Pages🟢🟢
+apply or register
+why us
+schools
+gallery 
+
+//application forms+
+
+Name
+Date of Birth
+Gender
+Admission class
+Physical condition
+Parent Name
+Parent contact
+Alternative contact
+Town of residence 
+Previou school
+
+
+Files
+Form 1[Birth Certificate, Acceptance Slip, Class Six Report Card]
+Form 2-4[Birth Certificate, Previous School Report Card]
+Lowersixth [Birth Certificate, GCE results slips|Printed page of results, Form 5 Report card]
+
+Class 1[Birth Certificate, Nursert School Certificate, Clinical Card for vaccination]
+Class 2-5[]

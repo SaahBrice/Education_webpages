@@ -4,7 +4,9 @@ const navBarItems = jQuery('#navbar-items');
 const closeMenu = jQuery('#close-menu');
 const navBar = jQuery('#navbar');
 const header =  jQuery('#header');
-const isSmallScreen = () => window.innerWidth <= 640;
+const isSmallScreen = () => window.innerWidth < 720;
+
+console.log(isSmallScreen(), window.innerWidth)
 
 $(window).on('scroll', function(ev){
     let top = $(window).scrollTop(),
@@ -21,15 +23,16 @@ $(window).on('scroll', function(ev){
 );
 
 $(window).on('resize', (ev)=>{
-  // if(!isSmallScreen()){
-    navBarItems.removeClass(`fixed top-0 bottom-0 left-0 right-0 block bg-main z-10 p-12`);
-    navBarItems.addClass('flex');
+  if(isSmallScreen()){
+    //navBarItems.removeClass(`fixed top-0 bottom-0 left-0 right-0 block bg-main z-10 p-12`);
+    navBarItems.addClass('hidden');
     closeMenu.addClass('hidden');
-  // }
-  // else{
-  //   navBarItems.addClass('hidden');
-  //   closeMenu.addClass('hidden');
-  // }
+  }
+  else{
+    navBarItems.removeClass('hidden');
+    navBarItems.removeClass(`fixed top-0 bottom-0 left-0 right-0 block bg-main z-10 p-12`);
+    closeMenu.addClass('hidden');
+  }
 });
 
 //mobile menu
@@ -73,6 +76,9 @@ tailwind.config = {
           complimentary: '#FFFFFF',
           accent: '#000000',
         },
+        screens:{
+          std: '720px',
+        }
 
       }
     }
